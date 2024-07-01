@@ -24,6 +24,8 @@ const ResizableTextArea = React.forwardRef<ResizableTextAreaRef, TextAreaProps>(
       className,
       style,
       disabled,
+      maxLength,
+      showMaxLabel,
       onChange,
       // Test only
       onInternalAutoSize,
@@ -182,6 +184,7 @@ const ResizableTextArea = React.forwardRef<ResizableTextAreaRef, TextAreaProps>(
           style={mergedStyle}
           className={classNames(prefixCls, className, {
             [`${prefixCls}-disabled`]: disabled,
+            [`${prefixCls}-has-limit`]: showMaxLabel && maxLength,
           })}
           disabled={disabled}
           value={mergedValue as string}

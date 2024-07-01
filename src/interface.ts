@@ -25,6 +25,7 @@ export type TextAreaProps = Omit<HTMLTextareaProps, 'onResize' | 'value'> & {
   className?: string;
   style?: React.CSSProperties;
   autoSize?: boolean | AutoSizeType;
+  showMaxLabel?: boolean;
   onPressEnter?: React.KeyboardEventHandler<HTMLTextAreaElement>;
   onResize?: (size: { width: number; height: number }) => void;
   classNames?: CommonInputProps['classNames'] & {
