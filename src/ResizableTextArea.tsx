@@ -115,7 +115,7 @@ const ResizableTextArea = React.forwardRef<ResizableTextAreaRef, TextAreaProps>(
       } else if (resizeState === RESIZE_MEASURING) {
         const textareaStyles = calculateAutoSizeStyle(
           textareaRef.current,
-          false,
+          true,
           minRows,
           maxRows,
         );
